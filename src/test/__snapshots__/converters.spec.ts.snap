@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`inputsToCallData should correctly convert BN input to [low, high] 1`] = `
+Object {
+  "abi": Object {
+    "inputs": Array [
+      Object {
+        "name": "input_a",
+        "type": "Uint256",
+      },
+    ],
+    "name": "test_b",
+    "outputs": Array [
+      Object {
+        "name": "output_a",
+        "type": "Uint256",
+      },
+    ],
+    "stateMutability": "view",
+    "type": "function",
+  },
+  "args": Object {
+    "input_a": "0a4cc799563c380000",
+  },
+  "result": Array [
+    "190000000000000000000",
+    "0",
+  ],
+}
+`;
+
+exports[`inputsToCallData should correctly convert multiple input values 1`] = `
+Object {
+  "abi": Object {
+    "inputs": Array [
+      Object {
+        "name": "input_a",
+        "type": "felt",
+      },
+      Object {
+        "name": "input_b",
+        "type": "Uint256",
+      },
+    ],
+    "name": "test_d",
+    "outputs": Array [
+      Object {
+        "name": "output_a",
+        "type": "felt",
+      },
+      Object {
+        "name": "output_b",
+        "type": "Uint256",
+      },
+    ],
+    "stateMutability": "view",
+    "type": "function",
+  },
+  "args": Object {
+    "input_a": "0x737472696e67",
+    "input_b": "0a4cc799563c380000",
+  },
+  "result": Array [
+    "126943972912743",
+    "190000000000000000000",
+    "0",
+  ],
+}
+`;
+
+exports[`inputsToCallData should correctly convert structures 1`] = `
+Object {
+  "abi": Object {
+    "inputs": Array [
+      Object {
+        "name": "input_a",
+        "type": "TestStruct",
+      },
+    ],
+    "name": "test_a",
+    "outputs": Array [
+      Object {
+        "name": "output_a",
+        "type": "TestStruct",
+      },
+    ],
+    "type": "function",
+  },
+  "args": Object {
+    "input_a": Object {
+      "member_a": "0x737472696e67",
+      "member_b": "0x737472696e67",
+      "member_c": "0a4cc799563c380000",
+    },
+  },
+  "result": Array [
+    "126943972912743",
+    "126943972912743",
+    "190000000000000000000",
+    "0",
+  ],
+}
+`;
+
+exports[`responseToOutput should correctly convert [low, high] response to BN 1`] = `
+Object {
+  "abi": Object {
+    "inputs": Array [
+      Object {
+        "name": "input_a",
+        "type": "Uint256",
+      },
+    ],
+    "name": "test_b",
+    "outputs": Array [
+      Object {
+        "name": "output_a",
+        "type": "Uint256",
+      },
+    ],
+    "stateMutability": "view",
+    "type": "function",
+  },
+  "response": Object {
+    "result": Array [
+      "0xa4cc799563c380000",
+      "0x0",
+    ],
+  },
+  "result": Object {
+    "output_a": "0a4cc799563c380000",
+  },
+}
+`;
+
+exports[`responseToOutput should correctly convert multiple values in response 1`] = `
+Object {
+  "abi": Object {
+    "inputs": Array [
+      Object {
+        "name": "input_a",
+        "type": "felt",
+      },
+      Object {
+        "name": "input_b",
+        "type": "Uint256",
+      },
+    ],
+    "name": "test_d",
+    "outputs": Array [
+      Object {
+        "name": "output_a",
+        "type": "felt",
+      },
+      Object {
+        "name": "output_b",
+        "type": "Uint256",
+      },
+    ],
+    "stateMutability": "view",
+    "type": "function",
+  },
+  "response": Object {
+    "result": Array [
+      "0xa4cc799563c380000",
+      "0x0",
+    ],
+  },
+  "result": Object {
+    "input_a": "0xa4cc799563c380000",
+    "input_b": "00",
+  },
+}
+`;
+
+exports[`responseToOutput should correctly convert structures 1`] = `
+Object {
+  "abi": Object {
+    "inputs": Array [
+      Object {
+        "name": "input_a",
+        "type": "TestStruct",
+      },
+    ],
+    "name": "test_a",
+    "outputs": Array [
+      Object {
+        "name": "output_a",
+        "type": "TestStruct",
+      },
+    ],
+    "type": "function",
+  },
+  "response": Object {
+    "result": Array [
+      "0x737472696e67",
+      "0x737472696e67",
+      "0xa4cc799563c380000",
+      "0x0",
+    ],
+  },
+  "result": Object {
+    "input_a": Object {
+      "member_a": "0x737472696e67",
+      "member_b": "0x737472696e67",
+      "member_c": "0a4cc799563c380000",
+    },
+  },
+}
+`;
