@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Abi, AbiEntry, FunctionAbi, StructAbi } from 'starknet';
 
-import { AbiType, isAbiType } from './types';
+import { AbiType, isAbiType } from '../starknet/types';
 import { createUsedImports, getFilesParams } from './utils';
 
 export function transform(abi: Abi[], path: string) {

@@ -7,8 +7,8 @@ export function getFilesParams(path: string) {
 
   return {
     shortName,
-    creatorName: `createStark${ShortName}`,
-    contractType: `Stark${ShortName}Contract`,
+    creatorName: `create${ShortName}`,
+    contractType: `${ShortName}Contract`,
     abiPath: `./abi/${fullName}`,
   };
 }
