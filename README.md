@@ -23,7 +23,7 @@ After calling this command you can get access to all factories from `src/generat
 
 ```typescript
 import { defaultProvider } from 'starknet';
-import { createStarkErc20 } from 'src/generated/contracts';
+import { createStarkErc20, createAnotherContract } from 'src/generated/contracts';
 
 const erc20Contract = createStarkErc20(defaultProvider, '0x06455b675ad6aa631fe3b7980de789b58d04fc0a5c1647d9807d709b6a72429b');
 const anotherContract = createAnotherContract(defaultProvider, '0x0000000000000000000000000000000000000000000000000000000000000000');
@@ -37,8 +37,11 @@ erc20Contract.invoke('transfer', {
   amount: new BN('190000000000000000000'),
 });
 
-erc20Contract.getInvokeFunctionTransaction('mint', {
+const mintTransaction = erc20Contract.getInvokeFunctionTransaction('mint', {
   recipient: '0x3fac00af50868b94ee4305f21dc43313ec7c06cf68646623535a1652bee6564',
   amount: new BN('190000000000000000000'),
 });
+
+defaultProvider.addTransaction(mintTransaction);
+
 ```
