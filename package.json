@@ -1,6 +1,6 @@
 {
   "name": "typechain-target-starknet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeChain target for StarkNet",
   "main": "./lib/index.js",
   "types": "./lib/index.d.js",
