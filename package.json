@@ -28,11 +28,10 @@
     "url": "git+https://github.com/akropolisio/typechain-target-starknet.git"
   },
   "keywords": [
-    "web3",
-    "rxjs",
+    "starknet",
     "typechain-target"
   ],
-  "author": "Dmitriy Serdtsev",
+  "author": "akropolis.io",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/akropolisio/typechain-target-starknet/issues"
